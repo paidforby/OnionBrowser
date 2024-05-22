@@ -11,10 +11,10 @@
 // git update-index --no-skip-worktree Config.xcconfig
 
 
-PRODUCT_BUNDLE_IDENTIFIER[config=Debug] =
-DEVELOPMENT_TEAM[config=Debug] =
-PROVISIONING_PROFILE_SPECIFIER[config=Debug] =
+PRODUCT_BUNDLE_IDENTIFIER[config=Debug] = org.equalitie.PeeledOnionBrowser
+DEVELOPMENT_TEAM[config=Debug] = 5SR9R72Z83
+PROVISIONING_PROFILE_SPECIFIER[config=Debug] = iOS Team Provisioning Profile
 
-PRODUCT_BUNDLE_IDENTIFIER[config=Release] = com.miketigas.OnionBrowser
-DEVELOPMENT_TEAM[config=Release] = 68QUP6KP2C
-PROVISIONING_PROFILE_SPECIFIER[config=Release] = 2023b Onion Browser Distribution
+PRODUCT_BUNDLE_IDENTIFIER[config=Release] = org.equalitie.PeeledOnionBrowser
+DEVELOPMENT_TEAM[config=Release] = 5SR9R72Z83
+PROVISIONING_PROFILE_SPECIFIER[config=Release] = iOS Team Provisioning Profile

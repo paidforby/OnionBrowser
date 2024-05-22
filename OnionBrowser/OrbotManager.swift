@@ -7,6 +7,8 @@
 //  This file is part of Onion Browser. See LICENSE file for redistribution terms.
 //
 
+/* Peeled: No Orbot or Tor requirement */
+/*
 import Foundation
 import OrbotKit
 
@@ -255,3 +257,4 @@ class OrbotManager : NSObject, OrbotStatusChangeListener {
 		}
 	}
 }
+*/

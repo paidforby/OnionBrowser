@@ -34,6 +34,8 @@ class WelcomeViewController: UIViewController {
 	func next() {
 		Settings.didWelcome = true
 
-		view.sceneDelegate?.show(OrbotManager.shared.checkStatus())
+		/* Peeled: No Orbot or Tor requirement */
+		//view.sceneDelegate?.show(OrbotManager.shared.checkStatus())
+		view.sceneDelegate?.show(BrowsingViewController())
 	}
 }

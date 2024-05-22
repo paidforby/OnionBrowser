@@ -6,6 +6,8 @@
 //  Copyright © 2021 Guardian Project. All rights reserved.
 //
 
+/* Peeled: No Orbot or Tor requirement */
+/*
 import NetworkExtension
 import Tor
 import IPtProxyUI
@@ -351,3 +353,4 @@ class TorManager {
 		transport.start()
 	}
 }
+*/

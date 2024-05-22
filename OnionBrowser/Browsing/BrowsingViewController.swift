@@ -324,10 +324,13 @@ class BrowsingViewController: UIViewController, TabDelegate {
 			}
 			updateReloadBt()
 
+		/* Peeled: No Circuits, Tor removed */
+		/*
 		case torBt:
 			let vc = CircuitViewController()
 			vc.currentUrl = currentTab?.url.clean
 			present(vc, sender)
+		*/
 
 		case backBt:
 			currentTab?.goBack()

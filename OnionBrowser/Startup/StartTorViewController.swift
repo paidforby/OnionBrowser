@@ -8,6 +8,8 @@
 //  This file is part of Onion Browser. See LICENSE file for redistribution terms.
 //
 
+/* Peeled: No Orbot or Tor requirement */
+/*
 import UIKit
 import IPtProxyUI
 
@@ -117,3 +119,4 @@ class StartTorViewController: UIViewController, BridgesConfDelegate {
 		present(UINavigationController(rootViewController: vc))
 	}
 }
+*/

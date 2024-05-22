@@ -33,6 +33,8 @@ open class Bookmark: NSObject {
 	private static let defaultBookmarks: [Bookmark] = {
 		var defaults = [Bookmark]()
 
+		/* Peeled: Don't use onion addresses */
+		/*
 		defaults.append(Bookmark(name: "DuckDuckGo", url: "https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/"))
 		defaults.append(Bookmark(name: "New York Times", url: "https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/"))
 		defaults.append(Bookmark(name: "BBC", url: "https://www.bbcnewsd73hkzno2ini43t4gblxvycyac5aw4gnv7t2rccijh7745uqd.onion/"))
@@ -44,10 +46,22 @@ open class Bookmark: NSObject {
 
 		defaults.append(Bookmark(name: "Onion Browser official site", url: "https://onionbrowser.com"))
 		defaults.append(Bookmark(name: "The Tor Project", url: "http://2gzyxa5ihm7nsggfxnu52rck2vv4rvmdlkiu3zzui5du4xyclen53wid.onion/"))
+		*/
+		defaults.append(Bookmark(name: "DuckDuckGo", url: "https://duckduckgo.com/"))
+		defaults.append(Bookmark(name: "New York Times", url: "https://www.nytimes.com/"))
+		defaults.append(Bookmark(name: "BBC", url: "https://bbcnews.com/"))
+		defaults.append(Bookmark(name: "ProPublica", url: "https://www.propublica.org/"))
+		defaults.append(Bookmark(name: "Freedom of the Press Foundation", url: "https://freedom.press/"))
+		defaults.append(Bookmark(name: "Deutsche Welle", url: "https://www.dw.com"))
+
+		defaults.append(Bookmark(name: "Onion Browser official site", url: "https://onionbrowser.com"))
+		defaults.append(Bookmark(name: "The Tor Project", url: "https://www.torproject.org"))
 
 		return defaults
 	}()
 
+	/* Peeled: No concern for v2 to 3 upgrade */
+	/*
 	private static let v2ToV3 = [
 		"https://3g2upl4pq6kufc4m.onion/": "https://duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion/",
 		"https://mobile.nytimes3xbfgragh.onion/": "https://www.nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x62d2lljsciiyd.onion/",
@@ -56,6 +70,7 @@ open class Bookmark: NSObject {
 		"https://www.propub3r6espa33w.onion/": "https://p53lf57qovyuvwsc6xnrppyply3vtqm7l6pcobkmyqsiofyeznfu5uqd.onion/",
 		"https://freedom.press/": "http://fpfjxcrmw437h6z2xl3w4czl55kvkmxpapg37bbopsafdu7q454byxid.onion/",
 		"http://expyuzz4wqqyqhjn.onion/": "http://2gzyxa5ihm7nsggfxnu52rck2vv4rvmdlkiu3zzui5du4xyclen53wid.onion/"]
+	*/
 
 	private static var startPageNeedsUpdate = true
 
@@ -106,6 +121,8 @@ open class Bookmark: NSObject {
 		}
 	}
 
+	/* Peeled: No concern for v2 to 3 upgrade */
+	/*
 	class func migrateToV3() {
 		guard !Settings.bookmarksMigratedToOnionV3 else {
 			return
@@ -133,6 +150,7 @@ open class Bookmark: NSObject {
 			}
 		}
 	}
+	 */
 
 	class func updateStartPage(force: Bool = false) {
 		guard let source = Bundle.main.url(forResource: "start", withExtension: "html") else {

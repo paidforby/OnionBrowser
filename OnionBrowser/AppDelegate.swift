@@ -99,7 +99,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 		DownloadHelper.purge()
 
-		TorManager.shared.stop()
+		/* Peeled: Tor removed */
+		//TorManager.shared.stop()
 
 		application.ignoreSnapshotOnNextApplicationLaunch()
 	}
@@ -202,6 +203,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 		}
 	}
 
+	/* Peeled: Tor removed */
+	/*
 	func maybeStopTor() {
 		Thread.performOnMain {
 			if self.sceneDelegates.isEmpty {
@@ -209,4 +212,5 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 			}
 		}
 	}
+	 */
 }

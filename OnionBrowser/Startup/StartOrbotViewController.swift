@@ -8,6 +8,8 @@
 //  This file is part of Onion Browser. See LICENSE file for redistribution terms.
 //
 
+/* Peeled: No Orbot or Tor requirement */
+/*
 import UIKit
 import OrbotKit
 
@@ -139,3 +141,4 @@ class StartOrbotViewController: UIViewController, WhyDelegate {
 		present(WhyViewController.instantiate(self))
 	}
 }
+*/

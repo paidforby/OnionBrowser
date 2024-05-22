@@ -42,6 +42,8 @@ class SettingsViewController: FixedFormViewController {
 			barButtonSystemItem: .done, target: self, action: #selector(dismsiss_))
 		navigationItem.title = NSLocalizedString("Settings", comment: "Scene title")
 
+		/* Peeled: Tor removed */
+		/*
 		if Settings.useBuiltInTor == true {
 			form
 			+++ ButtonRow {
@@ -57,6 +59,7 @@ class SettingsViewController: FixedFormViewController {
 				self?.view.sceneDelegate?.show(OrbotManager.shared.checkStatus())
 			}
 		}
+		 */
 
 		form
 		+++ defaultSecurityRow

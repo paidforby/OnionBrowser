@@ -8,6 +8,8 @@
 //  This file is part of Onion Browser. See LICENSE file for redistribution terms.
 //
 
+/* Peeled: No Circuits, Tor removed */
+/*
 import UIKit
 import OrbotKit
 import Tor
@@ -258,3 +260,4 @@ class CircuitViewController: UIViewController, UIPopoverPresentationControllerDe
 		}
 	}
 }
+*/

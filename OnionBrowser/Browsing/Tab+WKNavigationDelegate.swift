@@ -24,6 +24,8 @@ extension Tab: WKNavigationDelegate {
 			return decisionHandler(.cancel, preferences)
 		}
 
+		/* Peeled: No Orbot or Tor requirement */
+		/*
 		guard OrbotManager.shared.allowRequests() else {
 			return decisionHandler(.cancel, preferences)
 		}
@@ -33,6 +35,7 @@ extension Tab: WKNavigationDelegate {
 				return decisionHandler(.cancel, preferences)
 			}
 		}
+		 */
 
 		if let blocker = URLBlocker.blockingTarget(for: url, fromMainDocumentURL: self.url) {
 
@@ -102,6 +105,10 @@ extension Tab: WKNavigationDelegate {
 		// - is a valid URL with http: or https: protocol and a .onion hostname,
 		//
 		// https://community.torproject.org/onion-services/advanced/onion-location/
+		/*
+		 Peeled: Don't redirect to onion addresses
+		 */
+		/*
 		if !(url?.host?.lowercased().hasSuffix(".onion") ?? false)
 			&& url?.scheme?.lowercased() == "https"
 			&& HostSettings.for(url?.host).followOnionLocationHeader,
@@ -121,6 +128,7 @@ extension Tab: WKNavigationDelegate {
 
 			return
 		}
+		 */
 
 
 		if navigationResponse.canShowMIMEType {

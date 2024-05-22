@@ -103,15 +103,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 		BlurredSnapshot.remove()
 
-		let vc = OrbotManager.shared.checkStatus()
-
+		/* Peeled: No Orbot or Tor requirement */
+		//let vc = OrbotManager.shared.checkStatus()
+		let vc = if !Settings.didWelcome {
+			WelcomeViewController()
+		}
+		else {
+			BrowsingViewController()
+		}
 		show(vc)
 
 		// Seems, we're running via Tor. Set up bookmarks, if not done, yet.
+		/*
+		 Peeled: VC won't be nil, no concern for v2 to 3 upgrade
+		 just setup bookmarks, if needed
+		 */
+		/*
 		if vc == nil {
 			Bookmark.firstRunSetup()
 			Bookmark.migrateToV3()
 		}
+		*/
+		Bookmark.firstRunSetup()
 	}
 
 	func windowScene(_ windowScene: UIWindowScene,
@@ -159,8 +172,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	}
 
 	func sceneDidDisconnect(_ scene: UIScene) {
+		/* Peeled: Tor removed */
 		// Stop Tor, if no other scenes around anymore.
-		AppDelegate.shared?.maybeStopTor()
+		//AppDelegate.shared?.maybeStopTor()
 	}
 
 	func stateRestorationActivity(for scene: UIScene) -> NSUserActivity? {

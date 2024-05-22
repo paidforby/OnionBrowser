@@ -8,6 +8,8 @@
 //  This file is part of Onion Browser. See LICENSE file for redistribution terms.
 //
 
+/* Peeled: No Circuits, Tor removed */
+/*
 import UIKit
 
 class CircuitNodeCell: UITableViewCell {
@@ -55,3 +57,4 @@ class CircuitNodeCell: UITableViewCell {
 		return self
 	}
 }
+*/

@@ -462,6 +462,8 @@ class Tab: UIView {
 	// MARK: Private Methods
 
 	private func setup() {
+		/* Peeled: No Orbot or Tor requirement */
+		/*
 		if #available(iOS 17.0, *), Settings.useBuiltInTor == true {
 			if let proxy = TorManager.shared.torSocks5 {
 				conf.websiteDataStore.proxyConfigurations.removeAll()
@@ -472,6 +474,7 @@ class Tab: UIView {
 				return
 			}
 		}
+		*/
 
 		webView = WKWebView(frame: .zero, configuration: conf)
 
